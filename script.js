@@ -89,10 +89,13 @@ getDates().then(
                         source.src = data1.url;
                         video.appendChild(source);
 
-
+                        let divVideo = document.createElement('div');
                         let divName = document.createElement('div');
                         let divViews = document.createElement('div');
 
+                        divVideo.appendChild(video);
+
+                        divVideo.classList.add("divVideo");
                         divName.classList.add("divName");
                         divViews.classList.add("divViews");
 
@@ -100,7 +103,7 @@ getDates().then(
                         divName.innerText = element.name;
                         divViews.innerText = "Просмотры: " + data1.viewCount;
 
-                        elementInfo.appendChild(video);
+                        elementInfo.appendChild(divVideo);
                         elementInfo.appendChild(divName);
                         elementInfo.appendChild(divViews);
 
